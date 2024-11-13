@@ -1,0 +1,6 @@
+rg_backend_name      = "isno-rg-backend"
+rg_backend_location  = "West Europe"
+sa_backend_base_name = "isnosa"
+sc_backend_name      = "tfstate"
+sa_backend_key_name  = "isno-sa-backend-key"
+kv_backend_name      = "isno-kv-backend"
