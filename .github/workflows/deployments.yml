@@ -31,10 +31,10 @@ jobs:
       working-directory: ${{ env.WORKING_DIR }}
 
     - name: Terraform Plan
-      run: terraform plan
+      run: terraform plan -var-file='terraform.tfvars.dev'
       working-directory: ${{ env.WORKING_DIR }}
 
     - name: Terraform Apply
       id: apply
-      run: terraform apply -auto-approve -input=false
+      run: terraform apply -auto-approve -input=false -var-file='terraform.tfvars.dev'
       working-directory: ${{ env.WORKING_DIR }}
