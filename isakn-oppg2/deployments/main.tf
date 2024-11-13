@@ -66,4 +66,4 @@ module "database" {
   administrator_login = var.administrator_login
   administrator_login_password = var.administrator_login_password
   db_name = "${var.db_name}-${local.env}-${random_string.random.result}"
-}##
+}
