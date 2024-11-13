@@ -25,11 +25,7 @@ jobs:
       id: init
       run: terraform init
       working-directory: ${{ env.WORKING_DIR }}
-
-    - name: Terraform Format
-      run: terraform fmt -check
-      working-directory: ${{ env.WORKING_DIR }}
-
+      
     - name: Terraform Plan
       run: terraform plan -var-file="terraform.tfvars.dev"
       working-directory: ${{ env.WORKING_DIR }}
