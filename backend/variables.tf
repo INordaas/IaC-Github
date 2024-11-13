@@ -24,6 +24,6 @@ variable "kv_backend_name" {
 }
 
 variable "sa_backend_key_name" {
-    type = string
-    default = "sa-backend-key-demo"
+  type    = string
+  default = "sa-backend-key-demo"
 }
