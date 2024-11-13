@@ -20,15 +20,15 @@ provider "azurerm" {
 
 module "storage" {
   source           = "../modules/storage"
-  rg_name          = "${terraform.workspace}-${var.rg_name}"
+  rg_name          = "${var.rg_name}-${terraform.workspace}"
   replication_type = var.replication_type
   rg_location      = var.rg_location
   sa_base_name     = "${terraform.workspace}${var.sa_base_name}"
   account_tier     = var.account_tier
-  sc_name = "${terraform.workspace}-${var.sc_name}"
-  sc_access_type = var.sc_access_type
-  blob_name = "${terraform.workspace}-${var.blob_name}"
-  blob_type = var.blob_type
+  sc_name          = "${terraform.workspace}-${var.sc_name}"
+  sc_access_type   = var.sc_access_type
+  blob_name        = "${terraform.workspace}-${var.blob_name}"
+  blob_type        = var.blob_type
 }
 
 module "networking" {
