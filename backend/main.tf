@@ -8,7 +8,7 @@ terraform {
 
   backend "azurerm" {
     resource_group_name  = "isno-rg-backend"           # Can be passed via `-backend-config=`"resource_group_name=<resource group name>"` in the `init` command.
-    storage_account_name = "isnosaqu46gc06qe"          # Can be passed via `-backend-config=`"storage_account_name=<storage account name>"` in the `init` command.
+    storage_account_name = "isnosaq7gzl035nr"          # Can be passed via `-backend-config=`"storage_account_name=<storage account name>"` in the `init` command.
     container_name       = "tfstate"                   # Can be passed via `-backend-config=`"container_name=<container name>"` in the `init` command.
     key                  = "backend.terraform.tfstate" # Can be passed via `-backend-config=`"key=<blob key name>"` in the `init` command.
   }
@@ -78,15 +78,15 @@ resource "azurerm_key_vault" "kv_backend" {
     object_id = data.azurerm_client_config.current.object_id
 
     key_permissions = [
-      "Get", "Create", "List", "Delete",
+      "Get", "Create", "List", "Delete", "Recover", "Purge",
     ]
 
     secret_permissions = [
-      "Get", "Set", "List", "Delete",
+      "Get", "Set", "List", "Delete", "Recover", "Purge",
     ]
 
     storage_permissions = [
-      "Get", "Set", "List", "Delete",
+      "Get", "Set", "List", "Delete", "Recover", "Purge",
     ]
   }
 }
