@@ -52,6 +52,9 @@ module "networking" {
   address_space = var.address_space
   subnet_name   = "${var.subnet_name}-${local.env}-${random_string.random.result}"
   subnet_prefix = var.subnet_prefix
+  public_ip_name = "${var.public_ip_name}-${local.env}-${random_string.random.result}"
+  lb_name = "${var.lb_name}-${local.env}-${random_string.random.result}"
+  frontend_ip_name = "${var.frontend_ip_name}-${local.env}-${random_string.random.result}"
 }
 
 module "database" {
@@ -60,8 +63,7 @@ module "database" {
   rg_location   = module.storage.rglocation
   sqlserver_name = "${var.sqlserver_name}-${local.env}-${random_string.random.result}"
   sqlserver_version =  var.sqlserver_version
+  administrator_login = var.administrator_login
   administrator_login_password = var.administrator_login_password
   db_name = "${var.db_name}-${local.env}-${random_string.random.result}"
-}
-
-##
+}##

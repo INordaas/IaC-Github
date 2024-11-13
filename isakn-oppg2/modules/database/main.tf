@@ -8,7 +8,7 @@ resource "azurerm_mssql_server" "sqlserver" {
   resource_group_name          = var.rg_name
   location                     = var.rg_location
   version                      = var.sqlserver_version
-  administrator_login          = "4dm1n157r470r"
+  administrator_login          = var.administrator_login
   administrator_login_password = var.administrator_login_password
 }
 

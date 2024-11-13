@@ -32,3 +32,18 @@ variable "subnet_prefix" {
   type = string
   default = "10.0.2.0/24"
 }
+
+variable "public_ip_name" {
+  type = string
+  default = "default-ip-name"
+}
+
+variable "lb_name" {
+  type = string
+  default = "default-lb-name"
+}
+
+variable "frontend_ip_name" {
+  type = string
+  default = "default-frontend-ip-name"
+}
