@@ -1,4 +1,4 @@
-name: Main deploy
+name: Destroy dev
 
 on:
   workflow_dispatch:
