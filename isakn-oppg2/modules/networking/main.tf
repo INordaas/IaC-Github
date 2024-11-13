@@ -37,7 +37,7 @@ resource "azurerm_public_ip" "public_ip" {
 resource "azurerm_lb" "loadbalancer" {
   name                = var.lb_name
   location            = var.rg_location
-  resource_group_name = var.nsg_name
+  resource_group_name = var.rg_name
 
   frontend_ip_configuration {
     name                 = var.frontend_ip_name

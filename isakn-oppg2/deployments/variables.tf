@@ -102,3 +102,8 @@ variable "frontend_ip_name" {
   type = string
   default = "default-frontend-ip-name"
 }
+
+variable "administrator_login" {
+  type = string
+  default = "4dm1n157r470r"
+}

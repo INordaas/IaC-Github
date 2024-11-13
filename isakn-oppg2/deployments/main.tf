@@ -63,8 +63,7 @@ module "database" {
   rg_location   = module.storage.rglocation
   sqlserver_name = "${var.sqlserver_name}-${local.env}-${random_string.random.result}"
   sqlserver_version =  var.sqlserver_version
+  administrator_login = var.administrator_login
   administrator_login_password = var.administrator_login_password
   db_name = "${var.db_name}-${local.env}-${random_string.random.result}"
 }
-
-##
