@@ -51,7 +51,7 @@ jobs:
 
 
     - name: Terraform Apply staging
-      run: terraform apply -auto-approve -lock=false -var-file="terraform.tfvars.staging"
+      run: terraform apply -auto-approve -var-file="terraform.tfvars.staging"
       working-directory: ${{ env.WORKING_DIR }}
 
   prod:
