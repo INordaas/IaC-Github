@@ -87,3 +87,18 @@ variable "db_name" {
   type = string
   default = "default-db-name"
 }
+
+variable "public_ip_name" {
+  type = string
+  default = "default-ip-name"
+}
+
+variable "lb_name" {
+  type = string
+  default = "default-lb-name"
+}
+
+variable "frontend_ip_name" {
+  type = string
+  default = "default-frontend-ip-name"
+}
