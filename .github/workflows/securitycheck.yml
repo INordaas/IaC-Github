@@ -25,3 +25,4 @@ jobs:
         with:
             working-directory: ${{ env.WORKING_DIR }}
             github_token: ${{env.GITHUB_TOKEN}}
+            soft_fail: true
