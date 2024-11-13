@@ -2,7 +2,8 @@ name: Dev/Staging deploy
 
 on:
   push:
-    branches: [ "dev", "staging" ]
+    branches-ignore:
+        - 'main'
 
   workflow_dispatch:
 
