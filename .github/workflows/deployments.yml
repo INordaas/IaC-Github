@@ -27,5 +27,5 @@ jobs:
       working-directory: ${{ env.WORKING_DIR }}
       
     - name: Terraform Plan
-      run: terraform plan -var-file= terraform.tfvars.dev
+      run: terraform plan -var-file=terraform.tfvars.dev
       working-directory: ${{ env.WORKING_DIR }}
